@@ -14,11 +14,12 @@ public class user {
 		int choice = inp.nextInt();
 		
 		if (choice == 1) {
-			output.out();
+			 output.displayInformation(InformationUI.getInformationList());
 		}
 		else {
 			System.out.println("========================");
 			System.out.println("Thank You for Using the Application.");
+			Main.main(null);
 		}
 	}
 	

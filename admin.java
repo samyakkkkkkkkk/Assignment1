@@ -12,20 +12,20 @@ public class admin {
 		System.out.println("2. Delete the existing information");
 		System.out.println("3. Log Out");
 		System.out.println("Please select the required field: ");
-		int selection = input.nextInt();
+		int choice = input.nextInt();
 		
-		if (selection == 1) {
-			information.newinfo();
+		if (choice == 1) {
+			InformationUI.newinfo();
 		}
-		else if (selection == 2) {
-			information.delinfo();
+		else if (choice == 2) {
+			InformationUI.delinfo();
 		}
 		else {
 			System.out.println("========================");
 			System.out.println("Thank You for Using the Application.");
 			System.out.println("========================");
 			System.out.println("========================");
-			main.main(null);
+			Main.main(null);
 		}
 	}
 

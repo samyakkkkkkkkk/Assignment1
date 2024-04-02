@@ -1,42 +1,25 @@
 package Assignment;
 
+import java.util.ArrayList;
+
 public class output {
 	
-	        private String name;
-			private String discription;
-	        private String strategies;
-
-	        public output(String name, String description, String strategies) {
-	            this.name = name;
-	            this.discription = description;
-	            this.strategies = strategies;
-	        }
-		
-		
-		public String Name() {
-			return name;
-		}
-		
-		public String Disc() {
-			return discription;
-		}
-		
-		public String Stra() {
-			return strategies;
-		}
-		
-		public static void disaster(String name, String disc, String stra) {
-			disaster.add(new output(name,disc,stra));
-		}
-		
-		public static void out() {
-			System.out.println("========================");
-			System.out.println("Name:");
-			System.out.println("Discription: ");
-			System.out.println("Strategy: ");
-			System.out.println("========================");
-			
-		}
+    public static void displayInformation(ArrayList<ClimateInfo> informationList) {
+    	
+        if (informationList == null || informationList.isEmpty()) {
+            System.out.println("No information available.");
+        } 
+        else {
+            System.out.println("Displaying Information:");
+            for (ClimateInfo info : informationList) {
+            	
+                System.out.println("Policies of Climate Change: " + info.policies());
+                System.out.println("Strategies to eradicate Climate Change: " + info.strategies());
+                System.out.println("Planning to eradicate Climate Change: " + info.planning());
+                
+                System.out.println("========================");
+                
+            }
+        }
+    }
 }
-	        
-
